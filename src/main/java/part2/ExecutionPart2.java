@@ -20,6 +20,7 @@ public class ExecutionPart2 {
         EntityManager entityManager = entityManagerFactory.createEntityManager();
 
         // 2.1 - Criar instancias para serem adicionadas no banco de dados
+        
         Estado estadoParaAdicionar = new Estado("Rio de Janeiro", "RJ");
         Aluno alunoParaAdicionar = new Aluno("Daniel", 29, estadoParaAdicionar);
 
@@ -32,26 +33,26 @@ public class ExecutionPart2 {
         entityManager.getTransaction().commit();
 
         // 3 - Resgatar instâncias no banco de dados
-//        Estado estadoEncontrado = entityManager.find(Estado.class, 1);
-//        Aluno alunoEncontrado = entityManager.find(Aluno.class, 1);
-//
-//        System.out.println(estadoEncontrado);
-//        System.out.println(alunoEncontrado);
+        Estado estadoEncontrado = entityManager.find(Estado.class, 1);
+        Aluno alunoEncontrado = entityManager.find(Aluno.class, 1);
+
+        System.out.println(estadoEncontrado);
+        System.out.println(alunoEncontrado);
 
         // 4 - Alterar uma entidade
-//        entityManager.getTransaction().begin();
-//
-//        alunoEncontrado.setNome("Karam");
-//        alunoEncontrado.setIdade(20);
-//
-//        entityManager.getTransaction().commit();
+       entityManager.getTransaction().begin();
+
+       alunoEncontrado.setNome("Karam");
+       alunoEncontrado.setIdade(20);
+
+       entityManager.getTransaction().commit();
 
         // 5 - Remover uma entidade
-//        entityManager.getTransaction().begin();
-//
-//        entityManager.remove(alunoEncontrado);
-//
-//        entityManager.getTransaction().commit();
+       entityManager.getTransaction().begin();
+
+       entityManager.remove(alunoEncontrado);
+
+       entityManager.getTransaction().commit();
 
         // 6 - Encerrar o gerenciador de entidades e encerrar a fabrica de gerenciadores de entidade.
         entityManager.close();

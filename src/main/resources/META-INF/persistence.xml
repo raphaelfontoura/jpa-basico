@@ -18,7 +18,7 @@
             <!-- Configuracoes do banco de dados -->
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/digital_innovation_one" />
             <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="password" />
+            <property name="javax.persistence.jdbc.password" value="123456" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
         </properties>
 
@@ -44,23 +44,23 @@
             <!-- Configuracoes do banco de dados -->
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/digital_innovation_one" />
             <property name="javax.persistence.jdbc.user" value="root" />
-            <property name="javax.persistence.jdbc.password" value="password" />
+            <property name="javax.persistence.jdbc.password" value="123456" />
             <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
 
             <!-- Configuracoes do Hibernate (os parametros so sao reconhecidos se estiver usando a implementacao do Hibernate)-->
             <property name="hibernate.dialect" value="org.hibernate.dialect.MySQL8Dialect" />
             <property name="hibernate.show_sql" value="true" />
             <property name="hibernate.format_sql" value="true" />
-            <property name="hibernate.hbm2ddl.auto" value="create" />  <!-- Possible values for hibernate.hbm2ddl.auto are: validate, update, create, create-drop -->
+            <property name="hibernate.hbm2ddl.auto" value="create" />  
+            <!-- Possible values for hibernate.hbm2ddl.auto are: validate, update, create, create-drop -->
 
             <!-- Configuracoes do EclipseLink (os parametros so sao reconhecidos se estiver usando a implementacao do EclipseLink) -->
-<!--            <property name="eclipselink.target-database" value="MySQL"/>-->
-<!--            <property name="eclipselink.logging.level.sql" value="FINE" />-->
-<!--            <property name="eclipselink.logging.parameters" value="true" />-->
-<!--            <property name="eclipselink.ddl-generation" value="drop-and-create-tables" />-->
+           <!-- <property name="eclipselink.target-database" value="MySQL"/>
+           <property name="eclipselink.logging.level.sql" value="FINE" />
+           <property name="eclipselink.logging.parameters" value="true" />
+           <property name="eclipselink.ddl-generation" value="drop-and-create-tables" /> -->
         </properties>
 
     </persistence-unit>
 
 </persistence>
-

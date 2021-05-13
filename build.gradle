@@ -33,11 +33,19 @@ dependencies {
 
     // Implementacao EclipseLink
     // https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink
-    //compile group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.7.6'
+    // compile group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.7.6'
+
+    // https://mvnrepository.com/artifact/org.eclipse.persistence/eclipselink
+    implementation group: 'org.eclipse.persistence', name: 'eclipselink', version: '2.7.6'
+
 
     // Automatizador de criacao de Metamodels
     // https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen 
-    annotationProcessor('org.hibernate:hibernate-jpamodelgen:5.4.13.Final')
+    // annotationProcessor('org.hibernate:hibernate-jpamodelgen:5.4.13.Final')
+
+    // https://mvnrepository.com/artifact/org.hibernate/hibernate-jpamodelgen
+    compileOnly group: 'org.hibernate', name: 'hibernate-jpamodelgen', version: '5.4.13.Final'
+
 
     // https://mvnrepository.com/artifact/junit/junit
     testImplementation group: 'junit', name: 'junit', version: '4.12'
